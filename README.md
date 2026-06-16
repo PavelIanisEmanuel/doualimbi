@@ -1,2 +1,0 @@
-# doualimbi
-WMC SS project
