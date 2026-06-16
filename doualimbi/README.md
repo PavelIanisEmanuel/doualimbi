@@ -1,2 +1,2 @@
-# doualimbi
+# douălimbi
 WMC SS project
