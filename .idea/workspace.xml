@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="44c32558-3e2f-46bf-a362-5e602edaa63c" name="Changes" comment="example commit" />
+    <list default="true" id="44c32558-3e2f-46bf-a362-5e602edaa63c" name="Changes" comment="example commit">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -86,7 +89,7 @@
       <workItem from="1777543683540" duration="1406000" />
       <workItem from="1779542517010" duration="13000" />
       <workItem from="1780828741431" duration="830000" />
-      <workItem from="1781607395506" duration="756000" />
+      <workItem from="1781607395506" duration="1229000" />
     </task>
     <task id="LOCAL-00001" summary="added navbar">
       <option name="closed" value="true" />
@@ -112,7 +115,15 @@
       <option name="project" value="LOCAL" />
       <updated>1781625364413</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="example commit">
+      <option name="closed" value="true" />
+      <created>1781625387054</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1781625387054</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
