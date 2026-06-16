@@ -5,11 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="44c32558-3e2f-46bf-a362-5e602edaa63c" name="Changes" comment="added navbar">
-      <change afterPath="$PROJECT_DIR$/backend.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/login.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/login.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -54,6 +50,7 @@
     &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
     &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultAutoModeForALLUsers.v1&quot;: &quot;true&quot;,
     &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
@@ -91,7 +88,8 @@
       <updated>1777543682504</updated>
       <workItem from="1777543683540" duration="1406000" />
       <workItem from="1779542517010" duration="13000" />
-      <workItem from="1780828741431" duration="432000" />
+      <workItem from="1780828741431" duration="830000" />
+      <workItem from="1781607395506" duration="703000" />
     </task>
     <task id="LOCAL-00001" summary="added navbar">
       <option name="closed" value="true" />
