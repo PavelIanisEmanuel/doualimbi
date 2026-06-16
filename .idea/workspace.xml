@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="44c32558-3e2f-46bf-a362-5e602edaa63c" name="Changes" comment="example commit">
+    <list default="true" id="44c32558-3e2f-46bf-a362-5e602edaa63c" name="Changes" comment="working on frontend html">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +90,7 @@
       <workItem from="1777543683540" duration="1406000" />
       <workItem from="1779542517010" duration="13000" />
       <workItem from="1780828741431" duration="830000" />
-      <workItem from="1781607395506" duration="1229000" />
+      <workItem from="1781607395506" duration="2825000" />
     </task>
     <task id="LOCAL-00001" summary="added navbar">
       <option name="closed" value="true" />
@@ -123,7 +124,15 @@
       <option name="project" value="LOCAL" />
       <updated>1781625387054</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="work on backend.js">
+      <option name="closed" value="true" />
+      <created>1781625870340</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1781625870340</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -132,6 +141,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added navbar" />
     <MESSAGE value="example commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="example commit" />
+    <MESSAGE value="work on backend.js" />
+    <MESSAGE value="working on frontend html" />
+    <option name="LAST_COMMIT_MESSAGE" value="working on frontend html" />
   </component>
 </project>
