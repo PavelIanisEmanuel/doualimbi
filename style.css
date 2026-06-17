@@ -156,3 +156,8 @@ h5 span {
     justify-content: center !important;   /* Centers horizontally */
     padding: 0 !important;                /* Removes uneven inner spacing */
 }
+
+/* Ensure bootstrap icons inherit font size correctly in buttons */
+button i.bi {
+    font-size: inherit;
+}
