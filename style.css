@@ -1,3 +1,158 @@
+/* ── Fonts & Imports ── */
+@import url('https://fonts.googleapis.com/css2?family=Allerta+Stencil&family=Quicksand:wght@300..700&display=swap');
+
+/* ── Global Layout & Background Fixes ── */
+html, body {
+    background-color: #ffeb3b !important;
+    background-image: none !important;
+    background: #ffeb3b !important; /* Clears any shorthand background gradients from Bootswatch */
+    font-family: 'Quicksand', sans-serif;
+}
+
+/* ── Typography & Readability Overrides ── */
+/* Forces all base text, card content, and top navigation links to be solid black */
+html, body, .card, .card-body, .nav-link, .navbar-brand, .text-center .fw-bold.mt-1 {
+    color: #000000 !important;
+}
+
+/* Darkens subheaders (like Romanian translations) so they stand out clearly against the yellow background */
+.text-muted {
+    color: #2b2b2b !important;
+    opacity: 1 !important; /* Prevents Bootswatch opacity from making it look faded white */
+}
+
+/* ── Component Styling ── */
 .logo {
     width: 10rem !important;
+}
+
+/* ── Animations ── */
+@keyframes pop {
+    0% { transform: scale(.4); opacity: 0; }
+    70% { transform: scale(1.15); }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+.anim-pop {
+    animation: pop .5s ease;
+}
+
+/* Force headers, subheaders, and card headers to be black */
+.card-header,
+.card-header *,
+.modal-header,
+.modal-header * {
+    color: #000000 !important;
+}
+
+/* Custom color for Unit 1 Header (Overrides bg-primary) */
+.card-header.bg-primary {
+    background-color: #fcca03 !important; /* Change to whatever color you want */
+}
+
+/* Custom color for Unit 2 Header (Overrides bg-success) */
+.card-header.bg-success {
+    background-color: #ffd630 !important; /* Change to whatever color you want */
+}
+
+/* Custom color for Unit 3 Header (Overrides bg-danger) */
+.card-header.bg-danger {
+    background-color: #fcdc58 !important; /* Change to whatever color you want */
+}
+
+/* Custom color for Unit 4 Header (Overrides bg-warning) */
+.card-header.bg-warning {
+    background-color: #fae8a0 !important; /* Change to whatever color you want */
+}
+
+/* Custom color for Unit 5 Header (Overrides bg-info) */
+.card-header.bg-info {
+    background-color: #faf9f5 !important; /* Change to whatever color you want */
+}
+
+/* Change the lesson button hover effect to plain white */
+.text-center button.btn.rounded-circle:hover {
+    background-color: #ffffff !important;
+    border-color: #ffffff !important;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5) !important; /* Optional: adds a soft white glow instead of pink */
+}
+
+/* Change the modal "Got it" button from pink to black with white text */
+.modal-footer .btn-primary {
+    background-color: #000000 !important;
+    border-color: #000000 !important;
+    color: #ffffff !important;
+}
+
+/* Optional: Add a subtle hover state so it feels responsive */
+.modal-footer .btn-primary:hover {
+    background-color: #222222 !important;
+    border-color: #222222 !important;
+}
+
+/* Make the lesson footer completely transparent before answering */
+.fixed-bottom.bg-body {
+    background-color: transparent !important;
+    background: transparent !important;
+    border-top: none !important;
+}
+
+/* Ensure the background stays yellow behind it */
+.fixed-bottom {
+    background-image: none !important;
+}
+
+/* Force all text inside lesson question choices to be crisp solid black */
+.d-grid .btn-outline-secondary,
+.d-grid .btn,
+#typeInput,
+.fixed-bottom #footer-btn,
+h5 span {
+    color: #000000 !important;
+    opacity: 1 !important; /* Forces the browser to ignore any faded styling */
+}
+
+/* Ensure the border of the unselected options is dark enough to see clearly */
+.d-grid .btn-outline-secondary {
+    border-color: rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Maintain crisp black text even when you hover your mouse over a choice */
+.d-grid .btn-outline-secondary:hover {
+    color: #000000 !important;
+}
+
+/* ── Profile Section Typography Overrides ── */
+
+/* Darkens the subheaders inside cards (like "0 / 30 XP today" or achievement subtitles) */
+.card-body h6 + div,
+.card-body .text-muted,
+.card-body [style*="font-size:.75rem"],
+.text-muted {
+    color: #1a1a1a !important;
+    opacity: 1 !important; /* Strips away any transparent fade from the theme */
+}
+
+/* Fixes the week day labels below the bar charts (Mo, Tu, We, etc.) */
+.card-body .small.fw-bold.mt-1 {
+    color: #000000 !important;
+    opacity: 1 !important;
+}
+
+/* Ensures the current day highlight (like Sunday/Su) doesn't use a washed out color */
+.card-body .text-primary {
+    color: #000000 !important;
+}
+
+.signup-card {
+    max-width: 400px;
+    width: 100%;
+}
+
+/* Center the emojis perfectly inside the circular lesson buttons */
+.text-center button.btn.rounded-circle {
+    display: inline-flex !important;
+    align-items: center !important;     /* Centers vertically */
+    justify-content: center !important;   /* Centers horizontally */
+    padding: 0 !important;                /* Removes uneven inner spacing */
 }

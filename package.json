@@ -2,7 +2,7 @@
   "name": "doualimbi",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "js/index.js",
   "scripts": {
     "start": "json-server --watch db.json --port 3000"
   },
