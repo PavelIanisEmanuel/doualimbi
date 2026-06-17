@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="44c32558-3e2f-46bf-a362-5e602edaa63c" name="Changes" comment="example commit">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.json" beforeDir="false" afterPath="$PROJECT_DIR$/db.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+    <list default="true" id="44c32558-3e2f-46bf-a362-5e602edaa63c" name="Changes" comment="create frontend html">
       <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -92,7 +89,7 @@
       <workItem from="1779542517010" duration="13000" />
       <workItem from="1780828741431" duration="830000" />
       <workItem from="1781607395506" duration="1229000" />
-      <workItem from="1781710016633" duration="1329000" />
+      <workItem from="1781710016633" duration="1753000" />
     </task>
     <task id="LOCAL-00001" summary="added navbar">
       <option name="closed" value="true" />
@@ -126,7 +123,15 @@
       <option name="project" value="LOCAL" />
       <updated>1781625387054</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="create frontend html">
+      <option name="closed" value="true" />
+      <created>1781712877822</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1781712877822</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -135,6 +140,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added navbar" />
     <MESSAGE value="example commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="example commit" />
+    <MESSAGE value="create frontend html" />
+    <option name="LAST_COMMIT_MESSAGE" value="create frontend html" />
   </component>
 </project>
