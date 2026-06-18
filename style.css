@@ -236,3 +236,26 @@ button i.bi {
 .login-card a:hover {
     color: #333333 !important;
 }
+
+.tip-table {
+    font-size: 0.92rem;
+}
+
+.tip-table thead th {
+    background-color: #fcca03 !important;
+    color: #000000 !important;
+    border-color: #e6cc00 !important;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.tip-table tbody td {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    border-color: rgba(0,0,0,0.1) !important;
+    vertical-align: middle;
+}
+
+.tip-table tbody tr:nth-child(odd) td {
+    background-color: #fffdf0 !important;
+}

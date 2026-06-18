@@ -42,7 +42,19 @@ function escJs(s) {
 var UNITS = [
     {
         id: 'u1', title: 'Greetings', ro: 'Salutări', color: 'primary', icon: '<i class="bi bi-hand-wave-fill"></i>',
-        tip: { title: 'Saying hello in Romanian', body: 'Romanian has multiple greetings based on the level of formality needed. Here are the most common greetings sorted from least to most formal: «Ciao» is the everyday hi you use with friends. «Salut» is slightly more formal you use with people your age that you dont know well. «Bună» gets you through most conversations easily. Bună is a short form of the greetings that are used formally throughout the day:\n«Bună dimineața» (good morning), «Bună ziua» (good day), «Bună seara» (good evening), «Noapte bună» (good night). Romanians say «mulțumesc» for thank you — locals often shorten it to «mersi» (which comes from the French merci).' },
+        tip: {
+            title: 'Saying hello in Romanian',
+            body: 'Romanian greetings shift with formality \u2014 here\u2019s the everyday scale, plus the time-of-day versions of "bun\u0103".',
+            table: {
+                headers: ['Greeting', 'Used with', 'Formality'],
+                rows: [
+                    ['Ciao', 'Friends', 'Casual'],
+                    ['Salut', 'People your age you don\u2019t know well', 'Neutral'],
+                    ['Bun\u0103', 'Most people, most situations', 'Polite']
+                ]
+            },
+            note: '\u00ab Bun\u0103 \u00bb is short for the formal time-of-day greetings: \u00ab Bun\u0103 dimineața \u00bb (good morning), \u00ab Bun\u0103 ziua \u00bb (good day), \u00ab Bun\u0103 seara \u00bb (good evening), \u00ab Noapte bun\u0103 \u00bb (good night). For "thank you", Romanians say \u00ab mulțumesc \u00bb \u2014 often shortened to \u00ab mersi \u00bb (from the French merci).'
+        },
         vocab: [
             { ro: 'bună', en: 'hello' },
             { ro: 'bună ziua', en: 'good day' },
@@ -63,7 +75,22 @@ var UNITS = [
     },
     {
         id: 'u2', title: 'Basics', ro: 'Bazele', color: 'success', icon: '<i class="bi bi-person-fill"></i>',
-        tip: { title: 'I am, you are…', body: '«Eu sunt» means "I am", «tu ești» means "you are". Romanian usually drops the pronoun — «sunt bine» alone means "I\'m well". Verb endings tell you who is doing the action, just like in Italian or Spanish.' },
+        tip: {
+            title: 'I am, you are…',
+            body: '«A fi» (to be) is one of the most useful verbs in Romanian — here\u2019s the full conjugation. Romanian usually drops the pronoun in casual speech: «sunt bine» alone means "I\u2019m well", since the verb ending already tells you who\u2019s talking.',
+            table: {
+                headers: ['Pronoun', 'Conjugation', 'Meaning'],
+                rows: [
+                    ['eu', 'sunt', 'I am'],
+                    ['tu', 'ești', 'you are (singular)'],
+                    ['el / ea', 'este', 'he / she is'],
+                    ['noi', 'suntem', 'we are'],
+                    ['voi', 'sunteți', 'you are (plural)'],
+                    ['ei / ele', 'sunt', 'they are']
+                ]
+            },
+            note: 'Verb endings carry the same info as in Italian or Spanish, so the pronoun is often optional once you know the conjugation.'
+        },
         vocab: [
             { ro: 'eu sunt', en: 'I am' },
             { ro: 'tu ești', en: 'you are' },
@@ -84,7 +111,37 @@ var UNITS = [
     },
     {
         id: 'u3', title: 'Food & Drink', ro: 'Mâncare', color: 'danger', icon: '<i class="bi bi-cup-hot-fill"></i>',
-        tip: { title: 'Eating like a local', body: '«Mănânc» = I eat, «beau» = I drink. Romanian has no separate word for "some" here — «beau apă» literally "I drink water". Try «poftă bună!» before a meal: it\'s the Romanian "bon appétit", said at every table.' },
+        tip: {
+            title: 'Eating like a local',
+            body: 'Two everyday verbs you\u2019ll use at every meal: «a mânca» (to eat) and «a bea» (to drink). Romanian has no separate word for "some" here — «beau apă» literally means "I drink water".',
+            tables: [
+                {
+                    label: 'A mânca — to eat',
+                    headers: ['Pronoun', 'Conjugation', 'Meaning'],
+                    rows: [
+                        ['eu', 'mănânc', 'I eat'],
+                        ['tu', 'mănânci', 'you eat (singular)'],
+                        ['el / ea', 'mănâncă', 'he / she eats'],
+                        ['noi', 'mâncăm', 'we eat'],
+                        ['voi', 'mâncați', 'you eat (plural)'],
+                        ['ei / ele', 'mănâncă', 'they eat']
+                    ]
+                },
+                {
+                    label: 'A bea — to drink',
+                    headers: ['Pronoun', 'Conjugation', 'Meaning'],
+                    rows: [
+                        ['eu', 'beau', 'I drink'],
+                        ['tu', 'bei', 'you drink (singular)'],
+                        ['el / ea', 'bea', 'he / she drinks'],
+                        ['noi', 'bem', 'we drink'],
+                        ['voi', 'beți', 'you drink (plural)'],
+                        ['ei / ele', 'beau', 'they drink']
+                    ]
+                }
+            ],
+            note: 'Try «poftă bună!» before a meal — it\u2019s the Romanian "bon appétit", said at every table.'
+        },
         vocab: [
             { ro: 'apă', en: 'water' },
             { ro: 'pâine', en: 'bread' },
@@ -281,7 +338,10 @@ function renderProfile() {
             + '</div></div></div>';
     });
 
+    var greetingName = currentUser && currentUser.username ? currentUser.username : 'bă';
+
     return '<div class="pb-5">'
+        + '<h4 class="fw-bold mb-3">Ciao, ' + escHtml(greetingName) + '!</h4>'
         + '<div class="card mb-3"><div class="card-body">'
         + '<h6 class="fw-bold">Daily goal</h6>'
         + '<div class="text-muted small mb-2">' + p.todayXp + ' / ' + DAILY_GOAL + ' XP today</div>'
@@ -620,6 +680,39 @@ function openTip(unitId) {
         return '<button class="btn btn-outline-secondary btn-sm fw-bold me-1 mb-1" onclick="speak(\'' + escJs(v.ro) + '\')">'
             + '<i class="bi bi-volume-up-fill"></i> ' + escHtml(v.ro) + ' <span class="text-muted fw-normal">· ' + escHtml(v.en) + '</span></button>';
     }).join('');
+
+    function buildTableHtml(t) {
+        var headHtml = t.headers.map(function(h) {
+            return '<th scope="col">' + escHtml(h) + '</th>';
+        }).join('');
+        var rowsHtml = t.rows.map(function(row) {
+            return '<tr>' + row.map(function(cell) {
+                return '<td>' + escHtml(cell) + '</td>';
+            }).join('') + '</tr>';
+        }).join('');
+        var labelHtml = t.label ? '<div class="fw-bold small mb-1">' + escHtml(t.label) + '</div>' : '';
+        return '<div class="mb-3">'
+            + labelHtml
+            + '<div class="table-responsive">'
+            + '<table class="table table-sm table-bordered tip-table mb-0">'
+            + '<thead><tr>' + headHtml + '</tr></thead>'
+            + '<tbody>' + rowsHtml + '</tbody>'
+            + '</table>'
+            + '</div>'
+            + '</div>';
+    }
+
+    var tableHtml = '';
+    if (unit.tip.tables) {
+        tableHtml = unit.tip.tables.map(buildTableHtml).join('');
+    } else if (unit.tip.table) {
+        tableHtml = buildTableHtml(unit.tip.table);
+    }
+
+    var noteHtml = unit.tip.note
+        ? '<p class="text-muted fw-bold lh-base small mb-3">' + escHtml(unit.tip.note) + '</p>'
+        : '';
+
     document.getElementById('tipModalContent').innerHTML =
         '<div class="modal-header border-0 pb-0">'
         + '<h5 class="modal-title fw-bold">' + unit.icon + ' ' + escHtml(unit.tip.title) + '</h5>'
@@ -627,6 +720,8 @@ function openTip(unitId) {
         + '</div>'
         + '<div class="modal-body">'
         + '<p class="text-muted fw-bold lh-base">' + escHtml(unit.tip.body) + '</p>'
+        + tableHtml
+        + noteHtml
         + '<div class="mb-2">' + vocabHtml + '</div>'
         + '</div>'
         + '<div class="modal-footer border-0 pt-0">'
