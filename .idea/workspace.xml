@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="44c32558-3e2f-46bf-a362-5e602edaa63c" name="Changes" comment="accessibility tweaking, readability improvement">
-      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
+    <list default="true" id="44c32558-3e2f-46bf-a362-5e602edaa63c" name="Changes" comment="fixed login text field">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,23 +38,23 @@
 }]]></component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.005964757318844" />
-      <entry key="MS500" value="1.5432817378822938" />
-      <entry key="S2" value="3.5083902384214665" />
-      <entry key="S5" value="6.332326172535372" />
-      <entry key="S10" value="9.04888226841188" />
-      <entry key="S30" value="12.433552027140271" />
-      <entry key="S60" value="13.622133841973538" />
-      <entry key="M2" value="14.285334778726787" />
-      <entry key="M5" value="14.70767046066996" />
-      <entry key="M10" value="14.852732999748728" />
-      <entry key="M15" value="14.901575171323366" />
-      <entry key="M30" value="14.950663695655303" />
-      <entry key="H1" value="14.975300785777305" />
-      <entry key="H2" value="14.987642616152153" />
-      <entry key="H4" value="14.993819362487057" />
-      <entry key="D1" value="14.99896962340782" />
-      <entry key="W1" value="14.999852796721848" />
+      <entry key="MS100" value="1.0696213486501216" />
+      <entry key="MS500" value="2.653714882590232" />
+      <entry key="S2" value="4.721099089693265" />
+      <entry key="S5" value="5.4360004492930365" />
+      <entry key="S10" value="5.708378981390853" />
+      <entry key="S30" value="5.900669998316315" />
+      <entry key="S60" value="5.980630755263782" />
+      <entry key="M2" value="6.532661439300892" />
+      <entry key="M5" value="10.918562167980062" />
+      <entry key="M10" value="20.013609579462823" />
+      <entry key="M15" value="27.04012986830337" />
+      <entry key="M30" value="38.57525827503501" />
+      <entry key="H1" value="47.00204053570507" />
+      <entry key="H2" value="52.13154954907025" />
+      <entry key="H4" value="54.966564326909456" />
+      <entry key="D1" value="57.480023621563376" />
+      <entry key="W1" value="57.92535645787922" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="0.0" />
@@ -76,23 +76,23 @@
       <entry key="W1" value="0.0" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.9583572981302758" />
-      <entry key="MS500" value="1.5283704975410404" />
-      <entry key="S2" value="3.49911027541121" />
-      <entry key="S5" value="6.3243736707115765" />
-      <entry key="S10" value="9.04209918103212" />
-      <entry key="S30" value="12.429885573284764" />
-      <entry key="S60" value="13.620031401855108" />
-      <entry key="M2" value="14.284206406202435" />
-      <entry key="M5" value="14.707199177665599" />
-      <entry key="M10" value="14.852493910615065" />
-      <entry key="M15" value="14.901415002877332" />
-      <entry key="M30" value="14.950583221173234" />
-      <entry key="H1" value="14.975260450516398" />
-      <entry key="H2" value="14.987622423959623" />
-      <entry key="H4" value="14.99380926024312" />
-      <entry key="D1" value="14.998967938846043" />
-      <entry key="W1" value="14.999852556049234" />
+      <entry key="MS100" value="1.01087813396328" />
+      <entry key="MS500" value="2.4905732380982473" />
+      <entry key="S2" value="4.641373359647102" />
+      <entry key="S5" value="5.399374041274798" />
+      <entry key="S10" value="5.689194212555249" />
+      <entry key="S30" value="5.894073101711038" />
+      <entry key="S60" value="5.97730331463097" />
+      <entry key="M2" value="6.530962735811437" />
+      <entry key="M5" value="10.917754864410284" />
+      <entry key="M10" value="20.01304226563549" />
+      <entry key="M15" value="27.03966202715232" />
+      <entry key="M30" value="38.574949066960144" />
+      <entry key="H1" value="47.00185811452723" />
+      <entry key="H2" value="52.131449836968635" />
+      <entry key="H4" value="54.966512117583925" />
+      <entry key="D1" value="57.48001457197193" />
+      <entry key="W1" value="57.92535515626728" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -158,7 +158,7 @@
       <workItem from="1781607395506" duration="1229000" />
       <workItem from="1781710016633" duration="1753000" />
       <workItem from="1781718902447" duration="1296000" />
-      <workItem from="1781763624238" duration="2593000" />
+      <workItem from="1781763624238" duration="3921000" />
     </task>
     <task id="LOCAL-00001" summary="added navbar">
       <option name="closed" value="true" />
@@ -232,7 +232,31 @@
       <option name="project" value="LOCAL" />
       <updated>1781769302928</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="did some colors fix in the style sheet">
+      <option name="closed" value="true" />
+      <created>1781769802149</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1781769802149</updated>
+    </task>
+    <task id="LOCAL-00011" summary="lessons circle changed color from pink to yellow when hover">
+      <option name="closed" value="true" />
+      <created>1781770025597</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1781770025597</updated>
+    </task>
+    <task id="LOCAL-00012" summary="fixed login text field">
+      <option name="closed" value="true" />
+      <created>1781770638175</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1781770638175</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -246,6 +270,9 @@
     <MESSAGE value="helpers + rendering in index.js" />
     <MESSAGE value="fix navbar placement" />
     <MESSAGE value="accessibility tweaking, readability improvement" />
-    <option name="LAST_COMMIT_MESSAGE" value="accessibility tweaking, readability improvement" />
+    <MESSAGE value="did some colors fix in the style sheet" />
+    <MESSAGE value="lessons circle changed color from pink to yellow when hover" />
+    <MESSAGE value="fixed login text field" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed login text field" />
   </component>
 </project>
