@@ -417,7 +417,7 @@ function renderLesson() {
     }
 
     var comboHtml = (state.combo >= 3 && !feedback)
-        ? '<div class="text-center fw-bold text-warning mb-2"><i class="bi bi-fire"></i> ' + state.combo + ' in a row!</div>' : '';
+        ? '<div class="text-center fw-bold text-dark mb-2"><i class="bi bi-fire text-danger"></i> ' + state.combo + ' in a row!</div>' : '';
 
     return '<div style="max-width:560px;margin:0 auto;padding-bottom:160px">'
         + '<div class="d-flex align-items-center gap-2 mb-3">'
@@ -647,7 +647,11 @@ function openTip(unitId) {
 }
 
 function saveProgress() {
-    if (!currentUser) return;
+    if (!currentUser) {
+        localStorage.setItem('guestProgress', JSON.stringify(state.progress));
+        return;
+    }
+    localStorage.setItem('localProgress', JSON.stringify(state.progress));
     fetch('http://localhost:3000/users/' + currentUser.id, {
         method: 'PATCH',
         headers: { 'Content-Type': 'application/json' },
@@ -664,7 +668,7 @@ function updateNavStats() {
     var p = state.progress;
     document.getElementById('nav-streak').innerHTML = '<i class="bi bi-fire text-danger"></i> ' + p.streak;
     document.getElementById('nav-gems').innerHTML = '<i class="bi bi-gem text-info"></i> ' + p.gems;
-    document.getElementById('nav-xp').innerHTML = '<i class="bi bi-lightning-charge-fill text-warning"></i> ' + p.xp + ' XP';
+    document.getElementById('nav-xp').innerHTML = '<i class="bi bi-lightning-charge-fill text-dark"></i> ' + p.xp + ' XP';
     document.querySelectorAll('.nav-link[data-screen]').forEach(function(el) {
         el.classList.toggle('active', el.dataset.screen === state.screen);
     });
@@ -697,16 +701,25 @@ try { window.speechSynthesis && window.speechSynthesis.getVoices(); } catch(e) {
 (async function() {
     var stored = localStorage.getItem('currentUser');
     if (stored) {
-        try {
-            currentUser = JSON.parse(stored);
-            var res = await fetch('http://localhost:3000/users/' + currentUser.id);
-            var userData = await res.json();
-            if (userData && userData.progress) {
-                state.progress = userData.progress;
+        try { currentUser = JSON.parse(stored); } catch(e) { localStorage.removeItem('currentUser'); }
+        if (currentUser) {
+            try {
+                var res = await fetch('http://localhost:3000/users/' + currentUser.id);
+                var userData = await res.json();
+                if (userData && userData.progress) {
+                    state.progress = userData.progress;
+                }
+            } catch(e) {
+                var localProgress = localStorage.getItem('localProgress');
+                if (localProgress) {
+                    try { state.progress = JSON.parse(localProgress); } catch(e2) {}
+                }
             }
-        } catch(e) {
-            currentUser = null;
-            localStorage.removeItem('currentUser');
+        }
+    } else {
+        var guestProgress = localStorage.getItem('guestProgress');
+        if (guestProgress) {
+            try { state.progress = JSON.parse(guestProgress); } catch(e) {}
         }
     }
     render();
