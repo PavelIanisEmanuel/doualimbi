@@ -5,12 +5,78 @@
 html, body {
     background-color: #ffeb3b !important;
     background-image: none !important;
-    background: #ffeb3b !important; /* Clears any shorthand background gradients from Bootswatch */
+    background: #ffeb3b !important;
     font-family: 'Quicksand', sans-serif;
+    color: #000000 !important;
+}
+
+/* ── Quartz glassmorphism override: make cards solid white ── */
+/* The Quartz theme uses transparent gradient cards with backdrop blur,
+   which makes white card text appear on the yellow body background. */
+.card {
+    background-color: #ffffff !important;
+    background-image: none !important;
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
+    border: 1px solid rgba(0,0,0,0.1) !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08) !important;
+}
+
+/* ── Quartz navbar override: opaque yellow, dark hamburger icon ── */
+/* Quartz renders a transparent navbar; we need it opaque on the yellow background */
+.navbar {
+    background-color: #f5d800 !important;
+    background-image: none !important;
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
+}
+
+/* Quartz's default toggler icon uses a white SVG stroke, invisible on yellow */
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280%2C0%2C0%2C0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
+
+.navbar-toggler {
+    border-color: rgba(0,0,0,0.25) !important;
+}
+
+/* ── Quartz btn-secondary override ── */
+/* Quartz overrides btn-secondary to white text on semi-transparent white,
+   making locked lesson buttons show white text on the yellow background */
+.btn-secondary {
+    background-color: #cccccc !important;
+    background-image: none !important;
+    border-color: #bbbbbb !important;
+    color: #555555 !important;
+}
+.btn-secondary:disabled,
+.btn-secondary.disabled {
+    background-color: #d6d6d6 !important;
+    border-color: #cccccc !important;
+    color: #888888 !important;
+    opacity: 1 !important;
+}
+
+/* ── Quartz btn-outline-secondary global fix ── */
+/* Quartz sets btn-outline-secondary text/border to rgba(255,255,255,0.4) — nearly invisible.
+   The .d-grid rule below stays more specific for lesson choices; this catches everything else
+   (word-bank buttons in build exercises, "Back to path" in the out-of-hearts screen, etc.) */
+.btn-outline-secondary {
+    color: #444444 !important;
+    border-color: rgba(0,0,0,0.22) !important;
+}
+.btn-outline-secondary:hover {
+    color: #000000 !important;
+    background-color: rgba(0,0,0,0.07) !important;
+    border-color: rgba(0,0,0,0.32) !important;
+}
+.btn-outline-secondary:disabled,
+.btn-outline-secondary.disabled {
+    color: rgba(0,0,0,0.3) !important;
+    border-color: rgba(0,0,0,0.13) !important;
 }
 
 /* ── Typography & Readability Overrides ── */
-/* Forces all base text, card content, and top navigation links to be solid black */
 html, body, .card, .card-body, .nav-link, .navbar-brand, .text-center .fw-bold.mt-1 {
     color: #000000 !important;
 }
