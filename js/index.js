@@ -1,4 +1,3 @@
-// ── helpers ──
 function speak(text, rate) {
     rate = rate || 0.88;
     try {
@@ -40,11 +39,10 @@ function escJs(s) {
     return String(s || '').replace(/\\/g,'\\\\').replace(/'/g,"\\'");
 }
 
-// ── course data ──
 var UNITS = [
     {
         id: 'u1', title: 'Greetings', ro: 'Salutări', color: 'primary', icon: '<i class="bi bi-hand-wave-fill"></i>',
-        tip: { title: 'Saying hello in Romanian', body: '«Bună» is the everyday hello. «Bună ziua» (good day) is the polite version you\'d use with strangers or elders. «Salut» is casual, like "hi". Romanians say «mulțumesc» for thank you — locals often shorten it to «mersi».' },
+        tip: { title: 'Saying hello in Romanian', body: 'Romanian has multiple greetings based on the level of formality needed. Here are the most common greetings sorted from least to most formal: «Ciao» is the everyday hi you use with friends. «Salut» is slightly more formal you use with people your age that you dont know well. «Bună» gets you through most conversations easily. Bună is a short form of the greetings that are used formally throughout the day:\n«Bună dimineața» (good morning), «Bună ziua» (good day), «Bună seara» (good evening), «Noapte bună» (good night). Romanians say «mulțumesc» for thank you — locals often shorten it to «mersi» (which comes from the French merci).' },
         vocab: [
             { ro: 'bună', en: 'hello' },
             { ro: 'bună ziua', en: 'good day' },
@@ -164,10 +162,8 @@ var ACHIEVEMENTS = [
     { icon: '<i class="bi bi-trophy-fill text-warning"></i>', name: 'Maestru', desc: 'Finish every lesson', test: function(p) { return Object.keys(p.done).length >= UNITS.length * LESSONS_PER_UNIT; } }
 ];
 
-// ── current logged-in user ──
 var currentUser = null;
 
-// ── app state ──
 var state = {
     screen: 'home',
     active: null,
@@ -194,7 +190,6 @@ var state = {
     matchWrong: null
 };
 
-// ── lesson builder ──
 function buildLesson(unit, lessonIdx) {
     var allRo = unit.vocab.map(function(v) { return v.ro; });
     var allEn = unit.vocab.map(function(v) { return v.en; });
@@ -225,7 +220,6 @@ function buildLesson(unit, lessonIdx) {
     return ex;
 }
 
-// ── render: home ──
 function renderHome() {
     var p = state.progress;
     var doneCount = Object.keys(p.done).length;
@@ -259,7 +253,6 @@ function renderHome() {
     return html;
 }
 
-// ── render: profile ──
 function renderProfile() {
     var p = state.progress;
     var goalPct = Math.min(100, (p.todayXp / DAILY_GOAL) * 100);
@@ -305,7 +298,6 @@ function renderProfile() {
         + '</div></div></div>';
 }
 
-// ── render: match exercise ──
 function renderMatch() {
     var ex = state.exercises[state.idx];
     var html = '<div class="row g-2"><div class="col-6 d-grid gap-2">';
@@ -331,7 +323,6 @@ function renderMatch() {
     return html;
 }
 
-// ── render: lesson ──
 function renderLesson() {
     if (state.hearts <= 0) {
         return '<div class="text-center py-5 px-3" style="max-width:480px;margin:0 auto">'
@@ -436,7 +427,6 @@ function renderLesson() {
         + '</div>';
 }
 
-// ── render: complete ──
 function renderComplete() {
     var unit = state.active.unit;
     var total = 7;
@@ -454,7 +444,6 @@ function renderComplete() {
         + '</div>';
 }
 
-// ── actions ──
 function navigate(screen) {
     state.screen = screen;
     render();
@@ -691,7 +680,6 @@ function render() {
     updateNavStats();
 }
 
-// warm up speech voices
 try { window.speechSynthesis && window.speechSynthesis.getVoices(); } catch(e) {}
 
 (async function() {
