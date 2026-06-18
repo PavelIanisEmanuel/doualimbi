@@ -5,13 +5,71 @@
       "id": "1",
       "username": "admin",
       "password": "admin123",
-      "progress": { "xp": 0, "todayXp": 0, "gems": 120, "streak": 1, "perfects": 0, "done": {}, "weekXp": [0,0,0,0,0,0,0] }
+      "progress": {
+        "xp": 0,
+        "todayXp": 0,
+        "gems": 120,
+        "streak": 1,
+        "perfects": 0,
+        "done": {},
+        "weekXp": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      }
     },
     {
       "id": "22IhI7WifzE",
       "username": "fabi",
       "password": "123",
-      "progress": { "xp": 0, "todayXp": 0, "gems": 120, "streak": 1, "perfects": 0, "done": {}, "weekXp": [0,0,0,0,0,0,0] }
+      "progress": {
+        "xp": 0,
+        "todayXp": 0,
+        "gems": 120,
+        "streak": 1,
+        "perfects": 0,
+        "done": {},
+        "weekXp": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "username": "IANIS",
+      "password": "IANIS",
+      "progress": {
+        "xp": 42,
+        "todayXp": 42,
+        "gems": 145,
+        "streak": 1,
+        "perfects": 1,
+        "done": {
+          "u1-0": true,
+          "u1-1": true,
+          "u1-2": true
+        },
+        "weekXp": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          42
+        ]
+      },
+      "id": "TB99Kc-sK-M"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
