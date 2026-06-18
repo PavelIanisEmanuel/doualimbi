@@ -149,9 +149,19 @@ html, body, .card, .card-body, .nav-link, .navbar-brand, .text-center .fw-bold.m
     color: #000000 !important;
 }
 
-/* Lesson circle hover: subtle darkening instead of going white */
+/* Lesson circle hover: subtle darkening for already-yellow (done) circles */
 .text-center button.btn.rounded-circle:hover:not(:disabled) {
     filter: brightness(0.88) !important;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.18) !important;
+}
+
+/* Unlocked lesson circles (btn-outline-*) hover: fill yellow, not the Quartz pink */
+.text-center button.btn.rounded-circle[class*="btn-outline-"]:hover:not(:disabled) {
+    background-color: #ffeb3b !important;
+    background-image: none !important;
+    border-color: #e6cc00 !important;
+    color: #000000 !important;
+    filter: none !important;
     box-shadow: 0 2px 10px rgba(0,0,0,0.18) !important;
 }
 
