@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="d-flex justify-content-center align-items-center vh-100">
+<body>
 <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
     <div class="container-fluid">
         <a class="navbar-brand fw-bold" href="index.html"><img src="logo.png" class="logo" alt="logo"></a>
@@ -17,23 +17,16 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active" href="#" data-screen="home" onclick="navigate('home');return false;">Learn</a>
+                    <a class="nav-link" href="index.html">Learn</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#" data-screen="profile" onclick="navigate('profile');return false;">Profile</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="login.html">Login</a>
+                    <a class="nav-link active" href="signup.html">Sign Up</a>
                 </li>
             </ul>
-            <div class="d-flex gap-3 align-items-center">
-                <span id="nav-streak" class="fw-bold small"></span>
-                <span id="nav-gems" class="fw-bold small"></span>
-                <span id="nav-xp" class="fw-bold small"></span>
-            </div>
         </div>
     </div>
 </nav>
+<div class="d-flex justify-content-center align-items-center auth-page-content">
     <div class="signup-card card shadow-sm p-4">
         <h4 class="mb-4 text-center">Sign Up</h4>
         <form id="signupForm">
@@ -46,13 +39,14 @@
                 <input type="password" class="form-control" id="password" placeholder="Choose a password" required>
             </div>
             <div id="errorMsg" class="text-danger mb-3 d-none"></div>
-            <div id="successMsg" class="text-success mb-3 d-none">Account created! <a href="login.html">Login here</a>.</div>
+            <div id="successMsg" class="text-success mb-3 d-none">Account created! Redirecting to login…</div>
             <button type="submit" class="btn btn-outline-success w-100">Sign Up</button>
         </form>
         <p class="text-center mt-3 mb-0">Already have an account? <a href="login.html">Login</a></p>
     </div>
+</div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/signup.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/signup.js"></script>
 </body>
 </html>

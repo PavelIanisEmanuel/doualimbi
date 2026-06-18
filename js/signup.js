@@ -23,11 +23,16 @@ document.getElementById('signupForm').addEventListener('submit', async function 
         await fetch('http://localhost:3000/users', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ username, password })
+            body: JSON.stringify({
+                username,
+                password,
+                progress: { xp: 0, todayXp: 0, gems: 120, streak: 1, perfects: 0, done: {}, weekXp: [0,0,0,0,0,0,0] }
+            })
         });
 
         successMsg.classList.remove('d-none');
         document.getElementById('signupForm').reset();
+        setTimeout(function() { window.location.href = 'login.html'; }, 1500);
     } catch (err) {
         errorMsg.textContent = 'Could not connect to server.';
         errorMsg.classList.remove('d-none');

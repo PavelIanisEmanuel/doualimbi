@@ -144,9 +144,15 @@ h5 span {
     color: #000000 !important;
 }
 
-.signup-card {
+.signup-card,
+.login-card {
     max-width: 400px;
     width: 100%;
+}
+
+.auth-page-content {
+    min-height: calc(100vh - 60px);
+    padding: 2rem 1rem;
 }
 
 /* Center the emojis perfectly inside the circular lesson buttons */

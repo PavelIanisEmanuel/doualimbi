@@ -14,6 +14,7 @@ document.getElementById('loginForm').addEventListener('submit', async function (
         const user = users.find(u => u.password === password);
 
         if (user) {
+            localStorage.setItem('currentUser', JSON.stringify({ id: user.id, username: user.username }));
             window.location.href = 'index.html';
         } else {
             errorMsg.classList.remove('d-none');

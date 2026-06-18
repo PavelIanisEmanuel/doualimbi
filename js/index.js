@@ -164,6 +164,9 @@ var ACHIEVEMENTS = [
     { icon: '<i class="bi bi-trophy-fill text-warning"></i>', name: 'Maestru', desc: 'Finish every lesson', test: function(p) { return Object.keys(p.done).length >= UNITS.length * LESSONS_PER_UNIT; } }
 ];
 
+// ── current logged-in user ──
+var currentUser = null;
+
 // ── app state ──
 var state = {
     screen: 'home',
@@ -173,7 +176,7 @@ var state = {
     progress: {
         xp: 0, todayXp: 0, gems: 120, streak: 1, perfects: 0,
         done: {},
-        weekXp: [22, 35, 0, 41, 18, 30, 0]
+        weekXp: [0, 0, 0, 0, 0, 0, 0]
     },
     exercises: [],
     idx: 0,
@@ -606,6 +609,7 @@ function completeLesson(mistakes) {
         done: Object.assign({}, state.progress.done, { [key]: true }),
         weekXp: week
     };
+    saveProgress();
     state.screen = 'complete';
     render();
 }
@@ -642,6 +646,20 @@ function openTip(unitId) {
     new bootstrap.Modal(document.getElementById('tipModal')).show();
 }
 
+function saveProgress() {
+    if (!currentUser) return;
+    fetch('http://localhost:3000/users/' + currentUser.id, {
+        method: 'PATCH',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ progress: state.progress })
+    }).catch(function() {});
+}
+
+function logout() {
+    localStorage.removeItem('currentUser');
+    window.location.href = 'login.html';
+}
+
 function updateNavStats() {
     var p = state.progress;
     document.getElementById('nav-streak').innerHTML = '<i class="bi bi-fire text-danger"></i> ' + p.streak;
@@ -650,6 +668,18 @@ function updateNavStats() {
     document.querySelectorAll('.nav-link[data-screen]').forEach(function(el) {
         el.classList.toggle('active', el.dataset.screen === state.screen);
     });
+    var authLink = document.getElementById('nav-auth-link');
+    if (authLink) {
+        if (currentUser) {
+            authLink.textContent = 'Logout (' + currentUser.username + ')';
+            authLink.href = '#';
+            authLink.onclick = function() { logout(); return false; };
+        } else {
+            authLink.textContent = 'Login';
+            authLink.href = 'login.html';
+            authLink.onclick = null;
+        }
+    }
 }
 
 function render() {
@@ -664,4 +694,20 @@ function render() {
 // warm up speech voices
 try { window.speechSynthesis && window.speechSynthesis.getVoices(); } catch(e) {}
 
-render();
+(async function() {
+    var stored = localStorage.getItem('currentUser');
+    if (stored) {
+        try {
+            currentUser = JSON.parse(stored);
+            var res = await fetch('http://localhost:3000/users/' + currentUser.id);
+            var userData = await res.json();
+            if (userData && userData.progress) {
+                state.progress = userData.progress;
+            }
+        } catch(e) {
+            currentUser = null;
+            localStorage.removeItem('currentUser');
+        }
+    }
+    render();
+})();
