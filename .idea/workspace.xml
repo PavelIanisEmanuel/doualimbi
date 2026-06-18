@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="44c32558-3e2f-46bf-a362-5e602edaa63c" name="Changes" comment="helpers + rendering in index.js">
+    <list default="true" id="44c32558-3e2f-46bf-a362-5e602edaa63c" name="Changes" comment="vocab arrays, js logic, slight design tweaking, remove obsolete test accounts from json server">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.json" beforeDir="false" afterPath="$PROJECT_DIR$/db.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -98,7 +97,8 @@
       <workItem from="1780828741431" duration="830000" />
       <workItem from="1781607395506" duration="1229000" />
       <workItem from="1781710016633" duration="1753000" />
-      <workItem from="1781718902447" duration="1296000" />
+      <workItem from="1781718902447" duration="1510000" />
+      <workItem from="1781762914355" duration="2620000" />
     </task>
     <task id="LOCAL-00001" summary="added navbar">
       <option name="closed" value="true" />
@@ -156,7 +156,15 @@
       <option name="project" value="LOCAL" />
       <updated>1781718589745</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="vocab arrays, js logic, slight design tweaking, remove obsolete test accounts from json server">
+      <option name="closed" value="true" />
+      <created>1781720347439</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1781720347439</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -168,6 +176,7 @@
     <MESSAGE value="create frontend html" />
     <MESSAGE value="designing" />
     <MESSAGE value="helpers + rendering in index.js" />
-    <option name="LAST_COMMIT_MESSAGE" value="helpers + rendering in index.js" />
+    <MESSAGE value="vocab arrays, js logic, slight design tweaking, remove obsolete test accounts from json server" />
+    <option name="LAST_COMMIT_MESSAGE" value="vocab arrays, js logic, slight design tweaking, remove obsolete test accounts from json server" />
   </component>
 </project>
