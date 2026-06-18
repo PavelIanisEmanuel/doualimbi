@@ -49,13 +49,15 @@
       "username": "IANIS",
       "password": "IANIS",
       "progress": {
-        "xp": 14,
-        "todayXp": 14,
-        "gems": 125,
+        "xp": 42,
+        "todayXp": 42,
+        "gems": 145,
         "streak": 1,
-        "perfects": 0,
+        "perfects": 1,
         "done": {
-          "u1-0": true
+          "u1-0": true,
+          "u1-1": true,
+          "u1-2": true
         },
         "weekXp": [
           0,
@@ -64,7 +66,7 @@
           0,
           0,
           0,
-          14
+          42
         ]
       },
       "id": "TB99Kc-sK-M"
