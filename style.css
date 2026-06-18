@@ -22,13 +22,14 @@ html, body {
     box-shadow: 0 2px 8px rgba(0,0,0,0.08) !important;
 }
 
-/* ── Quartz navbar override: opaque yellow, dark hamburger icon ── */
-/* Quartz renders a transparent navbar; we need it opaque on the yellow background */
+/* ── Quartz navbar override: opaque white, dark hamburger icon ── */
+/* Quartz renders a transparent navbar; we need it opaque */
 .navbar {
-    background-color: #f5d800 !important;
+    background-color: #ffffff !important;
     background-image: none !important;
     -webkit-backdrop-filter: none !important;
     backdrop-filter: none !important;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1) !important;
 }
 
 /* Quartz's default toggler icon uses a white SVG stroke, invisible on yellow */
@@ -136,11 +137,22 @@ html, body, .card, .card-body, .nav-link, .navbar-brand, .text-center .fw-bold.m
     background-color: #faf9f5 !important; /* Change to whatever color you want */
 }
 
-/* Change the lesson button hover effect to plain white */
-.text-center button.btn.rounded-circle:hover {
-    background-color: #ffffff !important;
-    border-color: #ffffff !important;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5) !important; /* Optional: adds a soft white glow instead of pink */
+/* Completed lesson circles: yellow fill with black check icon */
+.text-center button.btn.rounded-circle.btn-primary,
+.text-center button.btn.rounded-circle.btn-success,
+.text-center button.btn.rounded-circle.btn-danger,
+.text-center button.btn.rounded-circle.btn-warning,
+.text-center button.btn.rounded-circle.btn-info {
+    background-color: #ffeb3b !important;
+    background-image: none !important;
+    border-color: #e6cc00 !important;
+    color: #000000 !important;
+}
+
+/* Lesson circle hover: subtle darkening instead of going white */
+.text-center button.btn.rounded-circle:hover:not(:disabled) {
+    filter: brightness(0.88) !important;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.18) !important;
 }
 
 /* Change the modal "Got it" button from pink to black with white text */
