@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="44c32558-3e2f-46bf-a362-5e602edaa63c" name="Changes" comment="accessibility tweaking, readability improvement">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.json" beforeDir="false" afterPath="$PROJECT_DIR$/db.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
-    </list>
+    <list default="true" id="44c32558-3e2f-46bf-a362-5e602edaa63c" name="Changes" comment="extend tips card" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -118,7 +113,7 @@
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultAutoModeForALLUsers.v1": "true",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
     "disable.download.node.interpreter.editor.notification": "true",
-    "git-widget-placeholder": "Merging main",
+    "git-widget-placeholder": "main",
     "javascript.preferred.runtime.type.id": "node",
     "junie.onboarding.icon.badge.shown": "true",
     "last_opened_file_path": "C:/scoala/WMC/Proiect/doualimbi",
@@ -235,7 +230,15 @@
       <option name="project" value="LOCAL" />
       <updated>1781769302928</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="extend tips card">
+      <option name="closed" value="true" />
+      <created>1781770951451</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1781770951451</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -249,6 +252,7 @@
     <MESSAGE value="helpers + rendering in index.js" />
     <MESSAGE value="fix navbar placement" />
     <MESSAGE value="accessibility tweaking, readability improvement" />
-    <option name="LAST_COMMIT_MESSAGE" value="accessibility tweaking, readability improvement" />
+    <MESSAGE value="extend tips card" />
+    <option name="LAST_COMMIT_MESSAGE" value="extend tips card" />
   </component>
 </project>
